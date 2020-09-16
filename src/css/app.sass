@@ -1,0 +1,96 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+html 
+  box-sizing: border-box
+
+*, *:before, *:after 
+  box-sizing: inherit
+
+*
+	margin: 0
+	padding: 0
+
+body
+	height: 100vh
+
+main
+	height: 100%
+	width: 100%
+	position: relative
+	background-color: #999
+
+.window
+	width: 480px
+	height: 360px
+	position: absolute
+	border: 1px solid #1e1f21
+	overflow: hidden
+
+	&.message
+		display: none
+		height: 120px
+		top: 50px
+		left: 75px
+
+		& .program-title-bar
+			position: relative
+
+			& .close
+				top: 1px
+				right: 0
+				content: ''
+				color: #fff
+				line-height: 1
+				width: 30px
+				height: 30px
+				display: flex
+				position: absolute
+				background-color: #999
+				justify-content: space-around
+				align-items: center
+
+	& .program-title-bar
+		color: #fff
+		padding: 5px
+		position: relative
+		text-align: center
+		background-color: #0200a9
+		border-bottom: 1px solid #47475a
+		font-family: 'Noto Sans JP', sans-serif
+
+	& .close
+
+	& .app-content
+		background-color: #fff
+		height: 100%
+		padding: 15px
+
+		& .text-content
+			font-family: 'Noto Sans JP', sans-serif
+
+
+		& .app-icon
+			text-decoration: none
+			&.selected
+				img
+					filter: hue-rotate(100deg)
+				
+				figcaption
+					color: #fff
+					
+					background-color: #0200a9
+
+			& figure
+				display: inline-block
+				width: 48px
+
+				& img
+					width: 32px
+					height: 32px
+					margin: auto
+					display: block
+
+				& figcaption
+					margin-top: 5px
+					font-size: 13px
+					padding: 2px 5px
+					text-align: center
