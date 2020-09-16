@@ -1,1 +1,61 @@
-hello
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+<body>
+	<main>
+		<div class="window">
+			<div class="program-title-bar">
+				<div class="title"><span>Program Manager</span></div>
+			</div>
+			<!-- <div class="close"><span>x</span></div> -->
+			<div class="app-content">
+				<!-- <figure class="app-icon">
+					<img src="" alt="">
+					<imgcaption></imgcaption>
+				</figure> -->
+
+				<a data-app="info" href="#" class="app-icon">
+					<figure class="">
+						<img src="./assets/img/WINHE001.PNG" alt="">
+						<figcaption>Help</figcaption>
+					</figure>
+				</a>
+				<!-- <a data-app="contact" href="#" class="app-icon">
+					<figure class="">
+						<img src="./assets/img/WINHE001.PNG" alt="">
+						<figcaption>Contact</figcaption>
+					</figure>
+				</a> -->
+			</div>
+
+		</div>
+	</main>
+	<div data-app="info" class="window message">
+		<div class="program-title-bar">
+			<div class="title"><span>About this site?</span></div>
+			<div class="close"><span>x</span></div>
+		</div>
+		<div class="app-content">
+			<div class="text-content">
+				<p>Melton S. (c) 2020</p>
+			</div>
+		</div>
+	</div>
+	<!-- <div data-app="" class="window">
+		<div class="program-title-bar">
+			<div class="title"><span>About this site?</span></div>
+		</div>
+		<div class="app-content">
+
+		</div>
+	</div> -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="./assets/js/app.js"></script>
+</body>
+</html>
