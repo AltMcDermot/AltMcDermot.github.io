@@ -11,17 +11,21 @@ dir_path_static = "./static"
 dir_path_public = "./public"
 dir_path_content = "./content"
 template_path = "./template.html"
-basepath = "/"
+default_basepath = "/"
 
 def main():
     if len(sys.argv) > 1:
         basepath = sys.argv[1]
+        # print(basepath)
+    else: 
+        basepath = default_basepath
 
     if os.path.exists(dir_path_public):
         shutil.rmtree(dir_path_public+'')
     os.makedirs(dir_path_public)
 
     print("starting build...")
+    print("basepath: "+basepath)
 
     copy_static_files(dir_path_static, dir_path_public)
     generate_page(dir_path_content, template_path, dir_path_public, basepath)
