@@ -8,7 +8,7 @@ from inline_markdown import *
 from build import copy_static_files, generate_page
 
 dir_path_static = "./static"
-dir_path_public = "./public"
+dir_path_public = "./docs"
 dir_path_content = "./content"
 template_path = "./template.html"
 default_basepath = "/"
